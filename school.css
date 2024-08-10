@@ -1,0 +1,1329 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Didact+Gothic&family=Dosis:wght@200..800&family=Orbitron:wght@400..900&family=Patua+One&family=Raleway:ital,wght@0,100..900;1,100..900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Concert+One&family=Didact+Gothic&family=Dosis:wght@200..800&family=Orbitron:wght@400..900&family=Patua+One&family=Raleway:ital,wght@0,100..900;1,100..900&family=Russo+One&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+
+/*------------------- This is Our First Navbar --------------------*/
+
+
+.first-navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #263675;
+  color: white;
+  font-family: "Albert Sans", sans-serif;
+}
+
+.left-icons {
+  display: flex;
+}
+
+.right-icons {
+  display: flex;
+}
+
+.contact-icons,
+.email-icon {
+  margin-right: 30px;
+}
+
+
+
+/* Adjust icon styles as needed */
+.first-navbar i {
+  margin-right: 15px;
+  /* Adds spacing between icon and text of right icons only */
+  color: white;
+  font-size: 20px;
+}
+
+.contact-icons i {
+  font-size: 15px;
+  margin-right: 10px;
+}
+
+.email-icon i {
+  font-size: 15px;
+  margin-right: 10px;
+}
+
+/*--------------------- This is Our Second Navbar --------------------*/
+
+.second-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background-color: white;
+  color: black;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: height 0.3s ease, padding 0.3s ease;
+}
+
+.second-navbar.sticky {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 80px;
+}
+
+.second-navbar .logo.sticky {
+  height: 40px;
+}
+
+.second-navbar.sticky #marker {
+  top: 2.8rem; /* Adjust this value as needed */
+}
+
+.second-navbar .logo img {
+  height: 80px;
+  mix-blend-mode: multiply;
+}
+
+.second-navbar #sidebar {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.second-navbar #sidebar li {
+  margin-left: 20px;
+  position: relative;
+}
+
+.second-navbar #sidebar li a {
+  font-size: 20px;
+  font-family: "Albert Sans", sans-serif;
+  text-decoration: none;
+  color: black;
+  padding: 5px 10px;
+  position: relative;
+}
+
+.second-navbar #marker {
+  height: 8px;
+  background-color: #263675;
+  position: absolute;
+  top: 3.5rem;
+  bottom: 0;
+  width: 70px;
+  transition: all 0.35s ease;
+}
+
+
+/* #sidebar li:nth-child(1):hover~#marker {
+  transform: translateX(0);
+}
+
+#sidebar li:nth-child(2):hover~#marker {
+  transform: translateX(calc(102px + 50% - 30px)) scaleX(1.5);
+}
+
+#sidebar li:nth-child(3):hover~#marker {
+  transform: translateX(calc(225px + 50% - 30px)) scaleX(1.5);
+}
+
+#sidebar li:nth-child(4):hover~#marker {
+  transform: translateX(calc(345px + 50% - 30px)) scaleX(1);
+} */
+
+/*------------------------ This is Floating Icons ----------------------------*/
+.floating-container {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  bottom: 0;
+  right: 0;
+  margin: 35px 25px;
+  z-index: 999;
+}
+
+.floating-container:hover {
+  height: 300px;
+}
+
+.floating-container:hover .floating-button {
+  box-shadow: 0 10px 25px rgba(44, 179, 240, 0.6);
+  transform: translateY(5px);
+  transition: all 0.3s;
+}
+
+.floating-container:hover .element-container .float-element:nth-child(1) {
+  animation: come-in 0.4s forwards 0.2s;
+  font-size: 25px;
+}
+
+.floating-container:hover .element-container .float-element:nth-child(2) {
+  animation: come-in 0.4s forwards 0.4s;
+}
+
+.floating-container:hover .element-container .float-element:nth-child(3) {
+  animation: come-in 0.4s forwards 0.6s;
+}
+
+.floating-container .element-container a:nth-child(3) .float-element.glow-moon {
+  background: yellow;
+  --glow-color: rgb(223, 255, 41);
+--glow-spread-color: rgba(220, 247, 20, 0.781);
+  /* box-shadow: 0 0 15px rgba(230, 245, 20, 0.8); */
+  box-shadow: 0 0 1em .25em var(--glow-color),
+      0 0 4em 1em var(--glow-spread-color),
+      inset 0 0 .75em .25em var(--glow-color);
+}
+
+.floating-container .element-container a:nth-child(3) .float-element.glow-sun {
+  background: red;
+  box-shadow: 0 0 15px rgba(255, 200, 0, 0.8);
+}
+
+
+.floating-container .floating-button {
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  background: #ec8d1d;
+  bottom: 0;
+  border-radius: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: white;
+  line-height: 65px;
+  text-align: center;
+  font-size: 30px;
+  z-index: 100;
+  box-shadow: 0 10px 25px -5px #ec8d1d;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.floating-container .float-element {
+  position: relative;
+  display: block;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 15px auto;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+  line-height: 50px;
+  opacity: 0;
+  transform: translateY(100px);
+  cursor: pointer;
+}
+
+.floating-container .float-element .material-icons {
+  vertical-align: middle;
+  font-size: 16px;
+}
+
+.floating-container .element-container a:nth-child(1) .float-element {
+  background: blue;
+  box-shadow: 0 20px 20px -10px #ec8d1d;
+}
+
+.floating-container .element-container a:nth-child(2) .float-element {
+  background: #4caf50;
+  box-shadow: 0 20px 20px -10px rgba(76, 175, 80, 0.5);
+}
+
+.floating-container .element-container a:nth-child(3) .float-element {
+  background: red;
+  box-shadow: 0 20px 20px -10px rgba(255, 152, 0, 0.5);
+}
+
+
+
+
+
+@keyframes come-in {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes come-in {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*-------------------------- This is the First Section Student Dress ------------------*/
+.first-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #e3e5f4;
+  height: 82vh;
+}
+
+.text-content {
+  flex: 1;
+  padding: 0 20px;
+}
+
+@font-face {
+  font-family: "ritesh";
+  src: url(Bernie.otf);
+}
+
+
+.text-content h1 {
+  color: #263675;
+  padding: 20px 0;
+  font-family: ritesh;
+  letter-spacing: 4px;
+}
+
+.text-content p {
+  font-size: 20px;
+  font-family: "Albert Sans", sans-serif;
+  line-height: 1.5;
+}
+
+.image-content {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.background-image {
+  position: absolute;
+  width: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.foreground-image {
+  width: 58%;
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.rotate-animation {
+  animation: rotate 5s ease-in-out;
+}
+
+/*----------------------- This is Three Card Section --------------------------*/
+
+.second-section {
+  background: url('pencil2.jpg') no-repeat center center fixed;
+  /* Add your background image URL */
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* position: relative; */
+}
+
+.cards-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+}
+
+.student-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-bottom: 5px solid #263675;
+  border-radius: 10px;
+  max-width: 350px;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  height: 400px;
+  align-self: flex-end;
+}
+
+.student-card.large {
+  max-width: 400px;
+  height: 450px;
+}
+
+.student-card:hover {
+  transform: translateY(-5px);
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  background-color: #263675;
+  border-radius: 10px;
+  margin: 0 auto 20px;
+}
+
+.icon-container i {
+  color: white;
+  font-size: 36px;
+}
+
+.student-card h3 {
+  margin: 10px 0;
+  font-size: 20px;
+  font-family: "Albert Sans", sans-serif;
+}
+
+.student-card p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+  font-family: "Albert Sans", sans-serif;
+}
+
+/* Responsive design */
+
+
+
+
+/*--------------------------- This is our Principle Sir Section -------------------------*/
+
+.third-section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 0rem 5rem;
+  background-size: contain;
+}
+
+.section-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.image {
+  flex: 0 0 auto;
+  max-width: 50%;
+}
+
+.fa-icon {
+  margin-right: 10px;
+}
+
+.contents-are h2 {
+  font-size: 45px;
+  font-family: "Albert Sans", sans-serif;
+  color: #263675;
+}
+
+.contents-are p {
+  font-family: "Albert Sans", sans-serif;
+  font-size: 20px;
+  padding-top: 2rem;
+  padding-right: 2rem;
+  line-height: 1.5;
+}
+
+:root {
+  --red: tomato;
+  --bgColor: bisque;
+}
+
+.container_outer_img {
+  box-shadow: -50px -50px 0 -40px var(--red), 50px 50px 0 -40px var(--red);
+}
+
+
+
+/*----------------------- This will be our counter section ------------------------*/
+
+.counters {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 3em 2em;
+  background-color: #263675;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.counters .counter {
+  max-width: 200px;
+  margin: 0 1em;
+  position: relative;
+}
+
+.counters .counter h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+.counters .counter h3 {
+  margin: 0.5em 0 0;
+  font-size: 1.2em;
+}
+
+.counter:not(:last-child)::before {
+  content: '';
+  background: #fff;
+  position: absolute;
+  right: -1em;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 3em;
+}
+
+
+
+/*------------------------- This is hexgonal image gallery section -----------------------*/
+
+.contain {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  padding: 0 5rem;
+  padding-top: 8rem;
+  font-family: "Albert Sans", sans-serif;
+}
+
+.gallery {
+  --s: 12vw; /* Control the size */
+  --g: 10px; /* Control the gap */
+  display: grid;
+  margin: calc(var(--s) + var(--g));
+  position: relative;
+}
+
+.gallery > img {
+  grid-area: 1/1;
+  width: var(--s);
+  aspect-ratio: 0.866;
+  object-fit: cover;
+  clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0);
+  transform: translate(var(--_x, 0), var(--_y, 0)) scale(var(--_t, 1));
+  cursor: pointer;
+  transition: transform 0.2s linear, box-shadow 0.2s linear;
+  animation: bubble 3s infinite alternate ease-in-out;
+}
+
+.gallery > img:nth-child(1) {
+  --_x: calc(-100% - var(--g));
+}
+
+.gallery > img:nth-child(7) {
+  --_x: calc(100% + var(--g));
+}
+
+.gallery > img:nth-child(3),
+.gallery > img:nth-child(5) {
+  --_y: calc(-75% - 0.87 * var(--g));
+}
+
+.gallery > img:nth-child(4),
+.gallery > img:nth-child(6) {
+  --_y: calc(75% + 0.87 * var(--g));
+}
+
+.gallery > img:nth-child(3),
+.gallery > img:nth-child(4) {
+  --_x: calc(-50% - 0.5 * var(--g));
+}
+
+.gallery > img:nth-child(5),
+.gallery > img:nth-child(6) {
+  --_x: calc(50% + 0.5 * var(--g));
+}
+
+.gallery > img:hover {
+  z-index: 1;
+}
+
+/* Bubble Animation */
+@keyframes bubble {
+  0%, 100% {
+      transform: translate(var(--_x, 0), var(--_y, 0)) scale(1);
+  }
+  50% {
+      transform: translate(var(--_x, 0), var(--_y, 0)) scale(1.05);
+  }
+}
+
+/* Quote Box */
+.quote-box {
+  position: relative;
+  border: 3px dotted #000;
+  padding: 20px;
+  width: 25vw; /* 430px */
+  height: 65vh;
+  margin: 20px auto;
+  border-radius: 15px;
+}
+
+.quote-icon {
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  font-size: 30px;
+  background-color: #fff;
+  padding: 0 5px;
+}
+
+.message-box {
+  background-color: #ffd502;
+  padding: 20px;
+  border-radius: 10px;
+  width: 22vw; /* width: 390px; height: 385px; */
+  height: 59vh;
+}
+
+.message-box p {
+  margin: 0;
+  font-size: 25px;
+  line-height: 1.5;
+  color: #000;
+}
+
+/* Arrow Image */
+.arrow {
+  width: 100px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  /* Centers horizontally */
+}
+
+/* Shake Animation */
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-5px);
+  }
+
+  50% {
+    transform: translateX(5px);
+  }
+
+  75% {
+    transform: translateX(-5px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.shake {
+  animation: shake 0.5s;
+}
+
+
+
+
+
+
+
+
+
+
+/*---------------------------- This is animation images slider section ------------------------*/
+
+.slider {
+  position: relative;
+  width: 100%;
+  margin: 0px auto;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 5s ease-in-out;
+  margin-top: 5rem;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+  padding: 20px;
+}
+
+.rect-box {
+  background-color: #f4be40;
+  padding: 100px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 0;
+  width: 50%;
+  height: 70%;
+  margin-right: -50px;
+  /* Overlaps the image */
+}
+
+.rect-box .quote {
+  font-size: 35px;
+  color: black;
+}
+
+.rect-box .text {
+  line-height: 1.6;
+  padding-bottom: 5rem;
+}
+
+.text p {
+  font-family: "Albert Sans", sans-serif;
+  font-size: 16px;
+  padding-top: 1rem;
+}
+
+.photo-container {
+  position: relative;
+  width: 350px;
+  height: 510px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  margin-top: -15rem;
+}
+
+.photo-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.person-name {
+  position: absolute;
+  top: -20px;
+  /* Adjust as needed to move the name above */
+  margin-bottom: -20px;
+  /* Counteract the margin-bottom from h3 */
+}
+
+.person-name span {
+  padding-left: 5rem;
+  font-family: "Albert Sans", sans-serif;
+  font-size: 16px;
+}
+
+.person-name h3 {
+  font-family: "Albert Sans", sans-serif;
+  font-size: 20px;
+}
+
+.container-new h2 {
+  text-align: center;
+  padding-top: 3rem;
+  font-family: "Albert Sans", sans-serif;
+  font-size: 35px;
+  font-weight: bold;
+  color: #263675;
+}
+
+.nav-arrows {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.nav-arrows button {
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/*----------------------- This is the icons section where WHY VIDYA SCHOOL -------------------*/
+
+.approved {
+  font-family: "Albert Sans", sans-serif;
+}
+
+.vidya-container {
+  text-align: center;
+  max-width: 800px;
+  margin: 0px auto;
+}
+
+.vidya-heading {
+  font-size: 3.5em;
+  /* margin-bottom: 10px; */
+  color: #263675;
+}
+
+.vidya-container p {
+  font-size: 1.2em;
+  line-height: 1.5;
+  margin-top: 1rem;
+  font-family: "Albert Sans", sans-serif;
+  color: gray;
+}
+
+.vidya-icon-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.vidya-icon-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.vidya-icon-box i {
+  font-size: 2em;
+  background-color: #263675;
+  color: white;
+  padding: 20px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  transition: background-color 0.3s;
+}
+
+.vidya-icon-box p {
+  margin: 0;
+  font-size: 1em;
+  font-family: "Albert Sans", sans-serif;
+}
+
+.vidya-icon-box i:hover {
+  background-color: orange;
+}
+
+
+/*---------------------------------------Hamburger -------------------------------------------*/
+
+.menu-icon {
+  position: relative;
+  width: 60px;
+  height: 50px;
+  /* background: rgb(0, 0, 0); */
+  padding: 10px;
+  cursor: pointer;
+}
+
+.menu-icon input {
+  display: none;
+}
+
+.menu-icon span {
+  display: block;
+  position: relative;
+  height: 3px;
+  width: 100%;
+  background: rgb(0, 0, 0);
+  border-radius: 10px;
+  opacity: 1;
+  left: 0;
+  margin-bottom: 24%;
+  transition: 0.3s ease-in-out;
+}
+
+.menu-icon span {
+  transform-origin: left center;
+}
+
+.menu-icon input:checked~span {
+  background: red;
+  left: 5px;
+  margin-bottom: 28%;
+}
+
+.menu-icon input:checked~span:nth-of-type(1) {
+  transform: rotate(45deg);
+}
+
+.menu-icon input:checked~span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.menu-icon input:checked~span:nth-of-type(3) {
+  transform: rotate(-45deg);
+}
+
+/*--------------------------------- This is the form section -----------------------------------*/
+
+.bg {
+  font-family: "Albert Sans", sans-serif;
+  padding: 50px 0;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+  /* Limit width on smaller screens */
+  margin-bottom: 30px;
+}
+
+.info-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.info-box i {
+  font-size: 2em;
+  color: #263675;
+  margin-bottom: 10px;
+}
+
+.info-box p {
+  margin: 0;
+  color: #555;
+}
+
+.vertical-line {
+  display: none;
+  /* Hide vertical line on small screens */
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 600px;
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+  color: #263675;
+  font-size: 45px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.contact-form button {
+  padding: 14px 20px;
+  background-color: #263675;
+  font-size: 20px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.contact-form button:hover {
+  background-color: orange;
+  color: black;
+}
+
+
+/**/
+.footer {
+  background: #263675;
+  padding: 30px 0px;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+.footer .row {
+  width: 100%;
+  margin: 1% 0%;
+  padding: 0.6% 0%;
+  color: white;
+  font-size: 0.8em;
+}
+
+.footer .row a {
+  text-decoration: none;
+  color: white;
+  transition: 0.5s;
+}
+
+.footer .row a:hover {
+  color: orange;
+}
+
+.footer .row ul {
+  width: 100%;
+}
+
+.footer .row ul li {
+  display: inline-block;
+  margin: 0px 30px;
+}
+
+.footer .row a i {
+  font-size: 2em;
+  margin: 0% 1%;
+}
+
+/*----------------------------------------- dark Mode -------------------------------------------*/
+.dark-mode .first-section {
+  background-color: #001022;
+  color: white;
+}
+
+/*----------------------------- Dark mode styling for second-section background --------------------------*/
+
+.dark-mode .second-section {
+  position: relative;
+  background: url('pencil2.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Transparent overlay behind cards */
+.dark-mode .second-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* Cards section */
+.cards-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Dark mode styling for student cards */
+.dark-mode .student-card {
+  background-color: rgba(38, 54, 117, 0.9);
+  border-color: #fff;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  max-width: 350px;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  transition: transform 0.3s;
+  height: 400px;
+}
+
+.dark-mode .student-card.large {
+  max-width: 400px;
+  height: 450px;
+}
+
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  background-color: #263675;
+  border-radius: 10px;
+  margin: 0 auto 20px;
+}
+
+.icon-container i {
+  color: white;
+  font-size: 36px;
+  /* Increase the icon size */
+}
+
+.student-card h3 {
+  margin: 10px 0;
+  font-size: 20px;
+  font-family: "Albert Sans", sans-serif;
+}
+
+.student-card p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+  font-family: "Albert Sans", sans-serif;
+}
+
+.dark-mode .student-card h3,
+.dark-mode .student-card p {
+  color: white;
+}
+
+/*---------------------------------- Principle Section -------------------------------*/
+
+.dark-mode .third-section {
+  background-color: #000212;
+  color: white;
+}
+
+/*-------------------First-navbar----- And ------- Second-navbar ---------------*/
+
+.dark-mode .first-navbar {
+  background-color: #0f1036;
+}
+
+.dark-mode .second-navbar {
+  background-color: #242250;
+  color: white;
+}
+
+/* Dark mode styling for sidebar links */
+.dark-mode #sidebar li a {
+  color: white !important;
+}
+
+/* Logo styling */
+.second-navbar .logo {
+  display: block;
+  position: relative;
+  z-index: 1000;
+}
+
+/* Dark mode styling for logo image */
+.dark-mode .second-navbar .logo img {
+  height: 80px;
+  mix-blend-mode: multiply;
+}
+
+/* Invert logo colors only for dark mode */
+.dark-mode .second-navbar .logo img.invert-colors {
+  filter: brightness(0) invert(1);
+}
+
+/*--------------------- Dark-Mode for Hexagonal Image Gallery  ----------------------*/
+/* Dark mode styling for flower section */
+.dark-mode .flower {
+  background-color: #071645;
+  color: white;
+}
+
+.dark-mode .flower .gallery img {
+  filter: brightness(0.7) invert(0);
+}
+
+.dark-mode .flower .message-box {
+  background-color: #ff6c02;
+}
+
+/* Dark mode styling for arrow image */
+.dark-mode .flower .arrow {
+  filter: brightness(0.7) invert(1);
+}
+
+/* Dark mode styling for quote box */
+.dark-mode .flower .quote-box {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-color: #4547c6;
+}
+
+
+.dark-mode .flower .quote-icon {
+  color: black;
+}
+
+/* Dark mode styling for quote text */
+.dark-mode .flower .quote-text {
+  color: black;
+}
+
+/*--------------------- This is the DarkMode for Slider  --------------------------*/
+body.dark-mode .container-new {
+  background-color: #0e0f1e;
+  color: #e0e0e0;
+}
+
+body.dark-mode .rect-box {
+  background-color: #211e4d;
+  color: #e0e0e0;
+}
+
+body.dark-mode .rect-box .quote {
+  color: #ffd700;
+}
+
+body.dark-mode .photo-container {
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .person-name h3,
+body.dark-mode .person-name span {
+  color: #cebdb5;
+}
+
+body.dark-mode .container-new h2 {
+  color: #ffa500;
+}
+
+body.dark-mode .nav-arrows button {
+  background-color: #a9aef0;
+  color: black;
+}
+
+/*------------------------ Now This is the sectio of Many Icons ------------------------*/
+
+body.dark-mode .approved {
+  background-color: #363171;
+}
+
+body.dark-mode .vidya-container p {
+  color: #e0e0e0;
+}
+
+body.dark-mode .vidya-heading {
+  color: wheat;
+}
+
+body.dark-mode .vidya-icon-box i {
+  background-color: #444;
+}
+
+body.dark-mode .vidya-icon-box i:hover {
+  background-color: #a9aef0;
+}
+
+/*---------------------- This is the contact Form DarkMode  ------------------------*/
+body.dark-mode .bg {
+  background-color: #0a0c23;
+}
+
+body.dark-mode .contact-info i {
+  color: #3f3c75;
+}
+
+body.dark-mode .contact-info p {
+  color: #e0e0e0;
+}
+
+body.dark-mode .vertical-line {
+  background-color: #e0e0e0;
+}
+
+body.dark-mode .contact-form h2 {
+  color: #ffa500;
+}
+
+body.dark-mode .contact-form label {
+  color: #e0e0e0;
+}
+
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+  background-color: #333;
+  border: 1px solid #555;
+  color: #e0e0e0;
+}
+
+body.dark-mode .contact-form button {
+  background-color: #3f3c75;
+  color: black;
+}
+
+body.dark-mode .contact-form button:hover {
+  background-color: #263675;
+  color: white;
+}
+
+/* Dark mode styles */
+body.dark-mode .menu-icon span {
+  background: white; /* White color for dark mode */
+}
+
+/* Adjust for checked state in dark mode */
+body.dark-mode .menu-icon input:checked~span {
+  background: red; /* Keep the color red when checked in dark mode */
+}
+
+/* This is dark mode of Marker color  */
+
+
+body.dark-mode .second-navbar #marker {
+  background-color: white; /* Marker color in dark mode */
+}
+

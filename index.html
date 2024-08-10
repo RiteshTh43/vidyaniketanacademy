@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="school.css">
+    <link rel="stylesheet" type="text/css" href="responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Vidya Niketan Academy</title>
+    <link rel="icon" a href="king.jpg">
+</head>
+<body>
+
+    <!----------------------- This is First Navbar Section ------------------------->
+    
+    <nav class="first-navbar">
+        <div class="left-icons">
+            <div class="contact-icons">
+                <i class="fa-solid fa-phone"></i>9821775780 | 9808054226
+            </div>
+            <div class="email-icon">
+                <i class="fa-solid fa-envelope"></i> vidyainfo@gmail.com
+            </div>
+        </div>
+        <div class="right-icons">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </nav>
+    
+
+    <!----------------------- This is Second Navbar Section --------------------->
+    
+    <nav class="second-navbar" id="secondNavbar">
+        <div class="logo">
+            <img src="king.jpg" alt="Logo">
+        </div>
+        <ul id="sidebar">
+            <li><a href="#first-section">Home</a></li>
+            <li><a href="#flower">About Us</a></li>
+            <li><a href="#third-section">Principle</a></li>
+            <li><a href="#bg">Contact</a></li>
+            <div id="marker"></div>
+        </ul>
+        <label for="menu-icon" class="menu-icon">
+            <input id="menu-icon" type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+    </nav>
+    
+    <!-------------------------- This Is Floating Icons Contains DarkMode  -------------------------->
+    
+    <section class="social-service" id="social-service">
+        <div class="floating-container">
+            <div class="floating-button" id="floatingButton" onclick="toggleContactMenu()">+</div>
+            <div class="element-container" id="contactMenu" style="display: none;">
+                <a href="tel:+9779821775780">
+                    <span class="float-element tooltip-left">
+                        <i class="fa-solid fa-phone"></i>
+                    </span>
+                </a>
+                <a href="https://wa.me/9821775780" target="_blank">
+                    <span class="float-element">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </span>
+                </a>
+                <a href="#" id="darkModeToggle" onclick="toggleDarkMode()">
+                    <span class="float-element">
+                        <i class="fa-solid fa-sun" id="sunIcon"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!--------------------- This Is Our First Section Student Dress Section -------------------->
+    
+    <div class="first-section" id="first-section">
+        <div class="text-content">
+            <h1>VIDYA NIKETAN ACADEMY</h1>
+            <p>In a nurturing school environment, creativity thrives as students are encouraged to express themselves freely
+                and think outside the box. Through art, music, drama, and project-based learning, schools empower children
+                to unleash their imagination, fostering a culture of innovation that prepares them to tackle real-world
+                challenges with ingenuity and resilience. By fostering a culture of kindness and empathy, schools sow the
+                seeds of compassion that ripple outwards, shaping future generations of empathetic leaders and global
+                citizens.</p>
+        </div>
+        <div class="image-content">
+            <img src="pngwing.com.png" alt="Background Wing" class="background-image">
+            <img src="Studentbg.png" alt="Student" class="foreground-image">
+        </div>
+    </div>
+    
+    <!-------------------------- This is Our Second Three Card Section -------------------------->
+    
+    <section class="second-section">
+        <div class="cards-section">
+            <div class="student-card">
+                <div class="icon-container">
+                    <i class="fa-solid fa-pencil"></i>
+                </div>
+                <h3>Power</h3>
+                <p>At our School, we guide students from basics to advanced stages, symbolized by the journey from pencil to pen. The pencil represents early learning and growth through mistakes. This solid support from our School prepares students to excel and reach their potential.</p>
+            </div>
+            <div class="student-card large">
+                <div class="icon-container">
+                    <i class="fa-solid fa-user-graduate"></i>
+                </div>
+                <h3>Futures</h3>
+                <p>
+                    At Our School, we build a strong academic foundation that helps students advance smoothly into higher education and a successful future. Our approach blends rigorous academics with sports and technology, preparing children for future challenges. We provide a well-rounded education, giving students the skills and confidence to thrive in all aspects of life.
+                </p>
+            </div>
+            <div class="student-card">
+                <div class="icon-container">
+                    <i class="fa-solid fa-baseball"></i>
+                </div>
+                <h3>Sports</h3>
+                <p> We emphasize both physical and educational activities , such as quizzes, math problem-solving games, football, cricket, and skipping.
+                    These help students build physical strength, boost mental resilience, and develop a strong mindset.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!------------------ This is Our Principle Sir Section -------------------->
+    
+    <section class="third-section" id="third-section">
+        <div class="section-content">
+            <div class="contents-are">
+                <h2><i class="fas fa-graduation-cap"></i> Words From Principal</h2>
+                <p>I hope you all had a wonderful break and are ready to dive into an exciting and productive new school
+                    year. My name is Rundi Prasad Chaudhary, and I am honored to be your principal. First, I want to extend
+                    a warm welcome to our new students and a welcome back to our returning ones. Each one of you is a valued
+                    member of our school community, and I am thrilled to see all the eager faces ready to learn and grow.
+                    Here at Vidya Niketan Academy, we believe in creating an environment where everyone feels safe,
+                    respected, and encouraged to reach their full potential. Our dedicated teachers and staff are here to
+                    support you every step of the way, whether you're mastering a new subject, joining a club or sports
+                    team, or simply making new friends.</p>
+            </div>
+            <div class="container_outer_img">
+                <div class="image">
+                    <img src="principlepng.png" alt="Image Description">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!------------------------- This is Counter Section  --------------------->
+    
+    <div class="counters">
+        <div class="counter">
+            <h1><span data-count="20">0</span></h1>
+            <h3>Teachers</h3>
+        </div>
+        <div class="counter">
+            <h1><span data-count="500">0</span>+</h1>
+            <h3>Students</h3>
+        </div>
+        <div class="counter">
+            <h1><span data-count="100">0</span>%</h1>
+            <h3>Excellence</h3>
+        </div>
+        <div class="counter">
+            <h1><span data-count="10">0</span>+</h1>
+            <h3>Years of Experience</h3>
+        </div>
+    </div>
+    </div>
+    
+    <!--------------------- This is Hexagonal Gallery Section ------------------------->
+    
+    <section class="flower" id="flower">
+        <div class="contain">
+            <div class="gallery">
+                <img src="flower1.png" alt="a house on a mountain">
+                <img src="flower4.png" alt="some pink flowers">
+                <img src="flower2.png" alt="big rocks with some trees">
+                <img src="flower5.png" alt="a waterfall and trees">
+                <img src="flower6.png" alt="a cool landscape">
+                <img src="flower7.png" alt="town between two buildings">
+                <img src="flower8.png" alt="view of sea above mountain">
+            </div>
+            <img src="arrow.png" alt="Arrow Image" class="arrow">
+            <div class="quote-box">
+                <i class="fas fa-quote-left quote-icon"></i>
+                <div class="message-box">
+                    <p class="quote-text">We believe in providing equal education and opportunities both boys and girls.
+                        Every child deserves the same priority for a bright future.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!------------------------ This is Image Automatic Slider ----------------------->
+    
+    <section class="container-new">
+        <h2>Meet Our Teachers</h2>
+        <div class="slider">
+            <div class="slides">
+
+                <div class="slide">
+                    <div class="person-name">
+                        <h3> Devendra Yadav</h3>
+                        <span>Founder</span>
+                    </div>
+                    <div class="rect-box">
+                        <div class="quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <div class="text">
+                            <p>As the head administrator, I am responsible for the overall management and strategic
+                                direction of the school.
+                                This includes curriculum development, faculty supervision, and student welfare. I work
+                                closely with teachers and staff to maintain high academic standards and a nurturing
+                                atmosphere that supports both academic achievement and personal growth.</p>
+                        </div>
+                    </div>
+                    <div class="photo-container">
+                        <img src="vice.jpg" alt="Principal">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="person-name">
+                        <h3>Nilam Chaudhary</h3>
+                        <span>Chairman</span>
+                    </div>
+                    <div class="rect-box">
+                        <div class="quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <div class="text">
+                            <p>As chairman, I preside over board meetings where key decisions are made regarding finances,
+                                policies, and the long-term vision of the school. I collaborate closely with the principal
+                                and administrative team to ensure that our educational programs align with our mission and
+                                meet regulatory standards.</p>
+                        </div>
+                    </div>
+                    <div class="photo-container">
+                        <img src="nilam.jpg" alt="Principal">
+                    </div>
+                </div>
+                
+                <div class="slide">
+                    <div class="person-name">
+                        <h3>Topper Student </h3>
+                        <span>Of School</span>
+                    </div>
+                    <div class="rect-box">
+                        <div class="quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <div class="text">
+                            <p>I am honored to be recognized as the top student at our school, where I have had a
+                                tremendously enriching experience. The environment here is conducive to learning, and I have
+                                been fortunate to excel academically while also growing personally.
+    
+                                One of the most rewarding aspects of my journey has been the supportive and friendly
+                                atmosphere fostered by our teachers and staff.</p>
+                        </div>
+                    </div>
+                    <div class="photo-container">
+                        <img src="gal.jpg" alt="Principal">
+                    </div>
+                </div>
+            </div>
+            <div class="nav-arrows">
+                <button class="next" onclick="nextSlide()">&#10094;</button>
+                <button class="prev" onclick="prevSlide()">&#10095;</button>
+            </div>
+        </div>
+    </section>
+    
+    <!------------------ This is Why Vidya School Icons Section ------------------->
+    
+    <section class="approved" id="approved">
+    
+        <div class="vidya-container">
+            <h1 class="vidya-heading">Why Vidya School</h1>
+            <p>
+                Our school boasts a neat and clean environment, ideal for learning. We offer a state-of-the-art computer lab
+                and reliable transportation services for students. Proudly, our school is officially approved by the
+                Government of Nepal, highlighting our commitment to excellence in education.
+            </p>
+            <div class="vidya-icon-container">
+                <div class="vidya-icon-box">
+                    <i class="fa-solid fa-school"></i>
+                    <p>Neat & Clean</p>
+                </div>
+                <div class="vidya-icon-box">
+                    <i class="fa-solid fa-desktop"></i>
+                    <p>Computer Lab</p>
+                </div>
+                <div class="vidya-icon-box">
+                    <i class="fa-solid fa-bus"></i>
+                    <p>Transportation<br>Service</p>
+                </div>
+                <div class="vidya-icon-box">
+                    <i class="fa-solid fa-landmark"></i>
+                    <p>Nepal Government <br>Certification Achieved</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!------------------------- This is Contact Us Form Section  ----------------------->
+    
+    <section class="bg" id="bg">
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="info-box">
+                    <i class="fas fa-phone"></i>
+                    <p>+977 9821775780</p>
+                </div>
+                <div class="info-box">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Fulwadiya, Saptary</p>
+                </div>
+                <div class="info-box">
+                    <i class="fas fa-envelope"></i>
+                    <p>vidyainfo@gmail.com</p>
+                </div>
+            </div>
+            <div class="vertical-line"></div>
+            <div class="contact-form">
+                <h2>Contact Us</h2>
+                <form action="#">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Full Name" required>
+    
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="abc@gmail.com" required>
+    
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+977 **********" required>
+
+                    <label for="phone">Address</label>
+                    <input type="text" id="subject" name="phone" placeholder="Village/City/District" required>
+    
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Your message" rows="4" required></textarea>
+    
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    
+    
+    <!---------------------------- This is Footer Section ------------------------------->
+    
+    <footer>
+        <div class="footer" id="footer">
+            <div class="row">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-telegram"></i></a>
+            </div>
+    
+            <div class="row">
+                <ul>
+                    <li><a href="#one">Home</a></li>
+                    <li><a href="#contact">Contact us</a></li>
+                    <li><a href="#principle">Words From Principle</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+    
+            <div class="row">
+                Vidya Niketan Academy Copyright © 2024 - All rights reserved || Designed By: Ritesh Chaudhary
+            </div>
+        </div>
+    
+    </footer>
+
+<script>
+    function toggleSidebar() {
+        const sidebar = document.getElementById('sidebar');
+        sidebar.classList.toggle('active');
+    }
+
+    document.querySelector('.menu-icon input').addEventListener('change', toggleSidebar);
+
+   
+
+</script>
+  
+<script src="school.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
